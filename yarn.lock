@@ -3014,9 +3014,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001280, caniuse-lite@^1.0.30001332, caniuse-lite@^1.0.30001335, caniuse-lite@^1.0.30001349:
-  version "1.0.30001367"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001367.tgz"
-  integrity sha512-XDgbeOHfifWV3GEES2B8rtsrADx4Jf+juKX2SICJcaUhjYBO3bR96kvEIHa15VU6ohtOhBZuPGGYGbXMRn0NCw==
+  version "1.0.30001449"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001449.tgz"
+  integrity sha512-CPB+UL9XMT/Av+pJxCKGhdx+yg1hzplvFJQlJ2n68PyQGMz9L/E2zCyLdOL8uasbouTUgnPl+y0tccI/se+BEw==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -9525,15 +9525,6 @@ slate@^0.72.8:
   version "0.72.8"
   resolved "https://registry.npmjs.org/slate/-/slate-0.72.8.tgz#5a018edf24e45448655293a68bfbcf563aa5ba81"
   integrity sha512-/nJwTswQgnRurpK+bGJFH1oM7naD5qDmHd89JyiKNT2oOKD8marW0QSBtuFnwEbL5aGCS8AmrhXQgNOsn4osAw==
-  dependencies:
-    immer "^9.0.6"
-    is-plain-object "^5.0.0"
-    tiny-warning "^1.0.3"
-
-slate@^0.81.0:
-  version "0.81.0"
-  resolved "https://registry.npmjs.org/slate/-/slate-0.81.0.tgz#2b58a72d2510a0e4158e1ce69cf4ee95d2d035c4"
-  integrity sha512-VKHeZ/PMeYorIeRiJWYT78kd5MkLdfKiVpPrUfdj6ZMLYYfIhnb8zIZdP5Jp9GaFYM3g+oZw+Pm9HCJstfQJ9A==
   dependencies:
     immer "^9.0.6"
     is-plain-object "^5.0.0"
