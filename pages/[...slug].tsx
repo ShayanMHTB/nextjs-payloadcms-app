@@ -1,5 +1,6 @@
 import React from 'react';
 import payload from 'payload';
+import { Grid, Cell } from '@faceless-ui/css-grid';
 import { GetServerSideProps } from 'next';
 import getConfig from 'next/config';
 import { Type as PageType } from '../collections/Page';
@@ -7,6 +8,9 @@ import NotFound from '../components/NotFound';
 import Head from '../components/Head';
 import classes from '../css/page.module.css';
 import RenderBlocks from '../components/RenderBlocks';
+
+import GridContainer from '../components/layout/GridContainer';
+import Template from '../components/layout/Template';
 
 const { publicRuntimeConfig: { SERVER_URL } } = getConfig();
 
@@ -23,7 +27,7 @@ const Page: React.FC<Props> = (props) => {
   }
 
   return (
-    <main className={classes.page}>
+    <Template>
       <Head
         title={page.meta?.title || page.title}
         description={page.meta?.description}
@@ -41,6 +45,16 @@ const Page: React.FC<Props> = (props) => {
         )}
       </div>
       <RenderBlocks layout={page.layout} />
+      <GridContainer>
+        <Grid>
+          <Cell cols={6}>
+            Some content inside the first cell of Grid
+          </Cell>
+          <Cell cols={6}>
+            Some content inside the second cell of Grid
+          </Cell>
+        </Grid>
+      </GridContainer>
       <footer className={classes.footer}>
         <hr />
         NextJS + Payload Server Boilerplate made by
@@ -53,7 +67,7 @@ const Page: React.FC<Props> = (props) => {
           Payload
         </a>
       </footer>
-    </main>
+    </Template>
   );
 };
 
