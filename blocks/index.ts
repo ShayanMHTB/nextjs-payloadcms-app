@@ -1,4 +1,4 @@
-import { CallToAction, Component as cta } from './CallToAction';
+import CallToAction, { Component as cta  } from './CallToAction';
 import { Content, Component as content } from './Content';
 import { Image, Component as image } from './Image';
 
