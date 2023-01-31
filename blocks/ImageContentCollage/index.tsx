@@ -1,6 +1,10 @@
 import { Block } from 'payload/types';
-import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
-import link, { Type as LinkType } from '../../fields/link';
+import 
+    backgroundColor, 
+    { Type as BackgroundColorType } from '../../fields/backgroundColor';
+import 
+    link, 
+    { Type as LinkType } from '../../fields/link';
 import { Type as MediaType } from '../../collections/Media';
 
 export type Image = {

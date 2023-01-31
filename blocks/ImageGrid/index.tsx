@@ -1,6 +1,8 @@
 import { Block } from 'payload/types';
 import { Type as MediaType } from '../../collections/Media';
-import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
+import 
+    backgroundColor, 
+    { Type as BackgroundColorType } from '../../fields/backgroundColor';
 
 export type Image = {
     image: MediaType

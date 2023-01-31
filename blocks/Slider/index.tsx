@@ -1,5 +1,7 @@
 import { Block } from 'payload/types';
-import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
+import 
+    backgroundColor, 
+    { Type as BackgroundColorType } from '../../fields/backgroundColor';
 import { Type as MediaType } from '../../collections/Media';
 
 export type Image = {
@@ -8,7 +10,8 @@ export type Image = {
 
 export type Type = {
     backgroundColor: BackgroundColorType
-    images: Image[]
+    images: Image[],
+    blockType: 'slider'
 }
 
 const Slider: Block = {

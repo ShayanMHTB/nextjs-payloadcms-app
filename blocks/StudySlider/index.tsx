@@ -1,10 +1,13 @@
 import { Block } from 'payload/types';
-import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
+import 
+    backgroundColor, 
+    { Type as BackgroundColorType } from '../../fields/backgroundColor';
 import { Type as StudyType } from '../../collections/Study';
 
 export type Type = {
     backgroundColor: BackgroundColorType
-    studies: StudyType[]
+    studies: StudyType[],
+    blockType: 'study-slider'
 }
 
 const StudySlider: Block = {

@@ -6,7 +6,8 @@ export type Section = {
 }
 
 export type Type = {
-    sections: Section[]
+    sections: Section[],
+    blockType: 'sticky-content'
 }
 
 const StickyContent: Block = {

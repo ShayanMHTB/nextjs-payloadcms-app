@@ -1,6 +1,8 @@
 import { Block } from 'payload/types';
 import { Type as MediaType } from '../../collections/Media';
-import stat, { Type as StatType } from '../../fields/stats';
+import 
+    stat, 
+    { Type as StatType } from '../../fields/stats';
 
 export type Image = {
     image: MediaType
@@ -8,7 +10,8 @@ export type Image = {
 
 export type Type = {
     images: Image[]
-    stats: StatType[]
+    stats: StatType[],
+    blockType: 'image-stat-collage'
 }
 
 const ImageStatCollage: Block = {

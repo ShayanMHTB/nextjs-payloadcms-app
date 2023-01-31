@@ -1,12 +1,15 @@
 import { Block } from 'payload/types';
-import stat, { Type as StatType } from '../../fields/stats';
+import 
+    stat, 
+    { Type as StatType } from '../../fields/stats';
 
 type Sizes = 'none' | 'small' | 'medium' | 'large';
 
 export type Type = {
     topOverlap: Sizes
     bottomOverlap: Sizes
-    stats: StatType[]
+    stats: StatType[],
+    blockType: 'statistics'
 };
 
 const Statistics: Block = {
