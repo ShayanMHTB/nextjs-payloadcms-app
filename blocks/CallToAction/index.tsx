@@ -1,10 +1,6 @@
 import { Block } from 'payload/types';
-import
-  backgroundColor,
-  { Type as BackgroundColorType } from '../../fields/backgroundColor';
-import 
-  link, 
-  { Type as LinkType } from '../../fields/link';
+import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
+import link, { Type as LinkType } from '../../fields/link';
 
 export type Action = {
   link: LinkType
@@ -14,6 +10,7 @@ export type Type = {
   backgroundColor: BackgroundColorType
   content: unknown
   actions: Action[]
+  blockType: 'call-to-action'
 }
 
 const CallToAction: Block = {
