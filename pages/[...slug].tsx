@@ -27,11 +27,17 @@ const Page: React.FC<Props> = (props) => {
   }
 
   return (
-    <Template>
+    <Template 
+      footer={{
+        nav: []
+      }} socialMedia={{
+        links: []
+      }}
+    >
       <Head
-        title={page.meta?.title || page.title}
-        description={page.meta?.description}
-        keywords={page.meta?.keywords}
+        // title={page.meta?.title || page.title}
+        // description={page.meta?.description}
+        // keywords={page.meta?.keywords}
       />
       <header className={classes.header}>
         <h1>{page.title}</h1>
