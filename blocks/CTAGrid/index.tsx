@@ -1,13 +1,17 @@
 import { Block } from "payload/types";
 import link, { Type as LinkType } from "../../fields/link";
 
+export type Icon = 'none' | 'arrow';
+
 export type Action = {
     healine: string
+    icon?: Icon
     link: LinkType
 };
 
 export type Type = {
     actions: Action[]
+    blockType: 'cta-grid'
 };
 
 const CTAGrid: Block = {
@@ -18,22 +22,38 @@ const CTAGrid: Block = {
     },
     fields: [
         {
-            name: 'actions',
-            label: 'Actions',
-            type: 'array',
-            minRows: 1,
-            maxRows: 2,
-            fields: [
+        name: 'actions',
+        label: 'Actions',
+        type: 'array',
+        minRows: 1,
+        maxRows: 4,
+        fields: [
+            {
+            name: 'headline',
+            label: 'Headline',
+            type: 'text',
+            required: true,
+            },
+            {
+            name: 'icon',
+            label: 'Icon',
+            type: 'radio',
+            defaultValue: 'arrow',
+            options: [
                 {
-                    name: 'headline',
-                    label: 'Headline',
-                    type: 'text',
-                    required: true,
+                label: 'None',
+                value: 'none',
                 },
-                link,
+                {
+                label: 'Arrow',
+                value: 'arrow',
+                },
             ],
+            },
+            link,
+        ],
         },
     ],
 };
-
+  
 export default CTAGrid;
