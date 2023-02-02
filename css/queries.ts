@@ -1,17 +1,22 @@
-import breakpoints from "./breakpoints";
+import breakpoints from './breakpoints';
 
-export const xs = `@media(max-widht: ${parseInt(breakpoints.xs)}px)`;
-export const sm = `@media(max-widht: ${parseInt(breakpoints.sm)}px)`;
-export const md = `@media(max-widht: ${parseInt(breakpoints.md)}px)`;
-export const lg = `@media(max-widht: ${parseInt(breakpoints.lg)}px)`;
-export const xl = `@media(max-widht: ${parseInt(breakpoints.xl)}px)`;
-export const xxl = `@media(max-widht: ${parseInt(breakpoints.xxl)}px)`;
+export const xs = `@media(max-width: ${breakpoints.xs}px)`;
+
+export const s = `@media(max-width: ${breakpoints.s}px)`;
+
+export const m = `@media(max-width: ${breakpoints.m}px)`;
+
+export const l = `@media(max-width: ${breakpoints.l}px)`;
+
+export const xl = `@media(max-width: ${breakpoints.xl}px)`;
+
+export const xxl = `@media(max-width: ${breakpoints.xxl}px)`;
 
 export default {
-    xs,
-    sm,
-    md,
-    lg,
-    xl,
-    xxl,
+  xs,
+  s,
+  m,
+  l,
+  xl,
+  xxl,
 };
