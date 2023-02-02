@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 import { Type as LinkType } from '../../fields/link';
 
 type Props = {
   className?: string
 } & LinkType;
 
-const CMSLink: React.FC<Props> = ({ 
+const CMSLink: React.FC<Props> = ({
   type,
   page,
   url,
@@ -17,7 +17,7 @@ const CMSLink: React.FC<Props> = ({
 
   if (type === 'page' || isRelativeURL) {
     return (
-      <Link 
+      <Link
         href={type === 'page' ? `/${page?.slug}` : url}
         scroll={false}
       >
@@ -35,7 +35,7 @@ const CMSLink: React.FC<Props> = ({
     >
       {children}
     </a>
-  )
-}
+  );
+};
 
 export default CMSLink;

@@ -1,50 +1,53 @@
-import { GlobalConfig } from "payload/types";
+import { GlobalConfig } from 'payload/types';
 
 export type Type = {
-    links: {
-        label: string
-        url: string
-    }[]
+  links: {
+    label: string
+    url: string
+  }[]
 }
 
 const SocialMedia: GlobalConfig = {
-    slug :'social-media',
-    fields: [
+  slug: 'social-media',
+  label: 'Social Media',
+  access: {
+    read: () => true,
+  },
+  fields: [
+    {
+      type: 'array',
+      name: 'links',
+      labels: {
+        singular: 'Link',
+        plural: 'Links',
+      },
+      fields: [
         {
-            name: 'nav',
-            label: 'Navigation',
-            type: 'array',
-            labels: {
-                singular: 'Link',
-                plural: 'Links',
+          type: 'row',
+          fields: [
+            {
+              name: 'label',
+              label: 'Label',
+              type: 'text',
+              required: true,
+              admin: {
+                width: '50%',
+              },
             },
-            fields: [
-                {
-                    type: 'row',
-                    fields: [
-                        {
-                            name: 'label',
-                            label: 'Label',
-                            type: 'text',
-                            required: true,
-                            admin: {
-                                width: '50%',
-                            },
-                        },
-                        {
-                            name: 'url',
-                            label: 'URL',
-                            type: 'text',
-                            required: true,
-                            admin: {
-                                width: '50%',
-                            },
-                        },
-                    ],
-                },
-            ],
+            {
+              name: 'url',
+              label: 'URL',
+              type: 'text',
+              required: true,
+              admin: {
+                width: '50%',
+              },
+            },
+          ],
         },
-    ],
+      ],
+    },
+  ],
 };
 
 export default SocialMedia;

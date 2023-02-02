@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from 'react';
+import Link from 'next/link';
 import Arrow from '../graphics/Arrow';
 import useStyles from './css';
+import { joinClassNames } from '../../css/joinClassNames';
 
-type Props = {
-  className?: string
-}
-
-const LetsTalk: React.FC<Props> = ({ className }) => {
-  const [ isHovered, setIsHovered ] = useState(false);
-  // const classes = useStyles({ isHovered });
-  const classes = useStyles();
+const LetsTalk: React.FC<{ className?:string }> = ({ className }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const classes = useStyles({ isHovered });
 
   return (
-    <div className={[ className, classes.wrap ].filter(Boolean).join(' ')}>
+    <div className={joinClassNames([className && className, classes.wrap])}>
       <svg
         className={classes.graphic}
         width="539"
@@ -212,7 +208,7 @@ const LetsTalk: React.FC<Props> = ({ className }) => {
         />
       </svg>
       <Link
-        href={'/contact'}
+        href="/contact"
         scroll={false}
       >
         <a
@@ -225,12 +221,12 @@ const LetsTalk: React.FC<Props> = ({ className }) => {
             className={classes.arrow}
           />
           <h3 className={classes.heading}>
-            let&apos;s Talk
+            Let&apos;s Talk
           </h3>
         </a>
       </Link>
     </div>
   );
-}
+};
 
 export default LetsTalk;

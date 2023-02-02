@@ -1,28 +1,32 @@
-import { GlobalConfig } from "payload/types";
-import link, { Type as LinkType } from "../fields/link";
+import { GlobalConfig } from 'payload/types';
+import link, { Type as LinkType } from '../fields/link';
 
 export type Type = {
-    nav: {
-        link: LinkType
-    }[]
+  nav: {
+    link: LinkType
+  }[]
 }
 
-const MegamMenu: GlobalConfig = {
-    slug: 'mega-menu',
-    fields: [
-        {
-            name: 'nav',
-            label: 'Navigation',
-            type: 'array',
-            labels: {
-                singular: 'Link',
-                plural: 'Links',
-            },
-            fields: [
-                link,
-            ],
-        },
-    ],
+const MegaMenu: GlobalConfig = {
+  slug: 'mega-menu',
+  label: 'Mega Menu',
+  access: {
+    read: () => true,
+  },
+  fields: [
+    {
+      name: 'nav',
+      label: 'Navigation',
+      type: 'array',
+      labels: {
+        singular: 'Link',
+        plural: 'Links',
+      },
+      fields: [
+        link,
+      ],
+    },
+  ],
 };
 
-export default MegamMenu;
+export default MegaMenu;

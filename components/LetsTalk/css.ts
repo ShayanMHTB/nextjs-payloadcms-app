@@ -3,8 +3,6 @@ import { base } from '../../css/base';
 import colors from '../../css/colors';
 import transitions from '../../css/transitions';
 
-const isHovered = false
-
 export default createUseStyles({
   '@keyframes spin': {
     from: {
@@ -20,7 +18,7 @@ export default createUseStyles({
     height: base(25),
     overflow: 'hidden',
   },
-  graphic: () => ({
+  graphic: ({ isHovered }) => ({
     position: 'absolute',
     zIndex: 1,
     top: 0,
@@ -51,7 +49,7 @@ export default createUseStyles({
     color: colors.antique,
     textDecoration: 'none',
   },
-  arrow: () => ({
+  arrow: ({ isHovered }) => ({
     transform: isHovered ? 'rotate(-45deg) translate3d(25%, 0, 0)' : 'rotate(-45deg)',
     opacity: isHovered ? 1 : 0.125,
     transition: `all ${transitions.default}ms linear`,
