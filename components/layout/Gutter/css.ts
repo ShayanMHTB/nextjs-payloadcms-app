@@ -8,7 +8,7 @@ export default createUseStyles({
     [queries.xxl]: {
       paddingLeft: gutterXL,
     },
-    [queries.lg]: {
+    [queries.l]: {
       paddingLeft: 0,
     },
   },
@@ -17,7 +17,7 @@ export default createUseStyles({
     [queries.xxl]: {
       paddingRight: gutterXL,
     },
-    [queries.lg]: {
+    [queries.l]: {
       paddingRight: 0,
     },
   },

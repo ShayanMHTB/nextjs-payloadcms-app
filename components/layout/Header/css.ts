@@ -2,9 +2,9 @@ import { createUseStyles } from 'react-jss';
 import color from 'color';
 import { base } from '../../../css/base';
 import colors from '../../../css/colors';
-import { headerHeight, strokeWidth } from '../../../css/sizes';
-import queries from '../../../css/queries';
 import zIndex from '../../../css/zIndex';
+import { strokeWidth, headerHeight } from '../../../css/sizes';
+import queries from '../../../css/queries';
 import transitions from '../../../css/transitions';
 
 export default createUseStyles({
@@ -18,18 +18,19 @@ export default createUseStyles({
     left: 0,
     right: 0,
     pointerEvents: 'none',
-    [queries.md]: {
+    [queries.m]: {
       padding: base(1.5),
     },
   },
   logo: {
     background: colors.red,
-    padding: base(0.75),
+    padding: base(0.875),
+    pointerEvents: 'all',
   },
   icon: {
-    width: base(1.5),
-    height: base(1.5),
     display: 'block',
+    width: base(1.25),
+    height: base(1.25),
   },
   menuButton: ({ menuActive }) => ({
     pointerEvents: 'all',
@@ -64,13 +65,18 @@ export default createUseStyles({
     height: '100%',
     overflowX: 'hidden',
     overflowY: 'auto',
-    [queries.md]: {
+    [queries.m]: {
       overflowY: 'auto',
       padding: `${headerHeight} ${base(1.5)} 0`,
     },
   },
+  gridContainer: {
+    [queries.s]: {
+      padding: 0,
+    },
+  },
   navLinks: {
-    [queries.md]: {
+    [queries.m]: {
       position: 'relative',
       zIndex: 1,
       marginBottom: base(12),
@@ -89,10 +95,10 @@ export default createUseStyles({
     },
   },
   secondaryNavItem: {
+    transition: `all ${transitions.default}ms linear`,
     color: 'white',
     textDecoration: 'none',
     '&:hover': {
-      transition: `all ${transitions.default}ms linear`,
       color: colors.blue,
     },
   },
@@ -100,12 +106,12 @@ export default createUseStyles({
     position: 'fixed',
     right: base(-5),
     bottom: base(-8),
-    [queries.md]: {
+    [queries.m]: {
       display: 'block',
       right: base(-3),
       bottom: base(-6),
     },
-    [queries.sm]: {
+    [queries.s]: {
       right: base(-2),
       bottom: base(-2),
       marginBottom: base(-3),
@@ -115,11 +121,11 @@ export default createUseStyles({
   ctaCSS: {
     width: `${base(35)} !important`,
     height: `${base(35)} !important`,
-    [queries.lg]: {
+    [queries.l]: {
       width: `${base(30)} !important`,
       height: `${base(30)} !important`,
     },
-    [queries.md]: {
+    [queries.m]: {
       width: `${base(22)} !important`,
       height: `${base(22)} !important`,
     },

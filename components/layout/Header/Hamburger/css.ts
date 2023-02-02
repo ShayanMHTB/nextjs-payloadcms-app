@@ -2,8 +2,6 @@ import { createUseStyles } from 'react-jss';
 import { base } from '../../../../css/base';
 import colors from '../../../../css/colors';
 
-const active = false;
-
 const generateLineStyles = (styles) => ({
   transition: 'all 400ms',
   transformOrigin: 'center',
@@ -11,7 +9,7 @@ const generateLineStyles = (styles) => ({
   strokeWidth: '2px',
   vectorEffect: 'non-scaling-stroke',
   ...styles,
-});
+})
 
 export default createUseStyles({
   hamburger: {
@@ -19,20 +17,20 @@ export default createUseStyles({
     width: base(),
     height: base(),
   },
-  line1: () => generateLineStyles({
+  line1: ({ active }) => generateLineStyles({
     opacity: active ? 0 : undefined,
     transform: active ? `translate(0, ${base(-0.5)})` : undefined,
   }),
-  line2: () => generateLineStyles({
+  line2: ({ active }) => generateLineStyles({
     opacity: 1,
     transform: active ? 'rotate(45deg)' : undefined,
   }),
-  line3: () => generateLineStyles({
+  line3: ({ active }) => generateLineStyles({
     opacity: active ? 1 : 0,
     transform: active ? 'rotate(-45deg)' : undefined,
   }),
-  line4: () => generateLineStyles({
+  line4: ({ active }) => generateLineStyles({
     opacity: active ? 0 : undefined,
-    transform: active ? `translate(0, ${base(0.5)})` : undefined,
+    transform: active ? `translate(0, ${base(.5)})` : undefined,
   }),
-});
+})

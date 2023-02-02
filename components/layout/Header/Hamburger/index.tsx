@@ -1,12 +1,8 @@
-import React from "react";
-import useStyles from "./css";
+import React from 'react';
+import useStyles from './css';
 
-type Props = {
-  active: boolean
-}
-
-const Hamburger: React.FC<Props> = ({ active }) => {
-  const classes = useStyles();
+const Hamburger: React.FC<{ active: boolean }> = ({ active }) => {
+  const classes = useStyles({ active });
 
   return (
     <svg
